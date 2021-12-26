@@ -6,7 +6,7 @@ WORKDIR /app
 RUN apt-get update 
 RUN apt-get install ghostscript -y 
 RUN apt install tesseract-ocr -y 
-RUN apt install git 
+RUN apt install git -y
 
 RUN mkdir static
 RUN mkdir templates
