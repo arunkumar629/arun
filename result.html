@@ -1,0 +1,40 @@
+<html>
+   <body>
+      <form action = "/uploader" method = "POST" 
+         enctype = "multipart/form-data">
+         <input type = "file" name = "file" />
+         <input type = "submit"/>
+      </form>
+<p>loading...</p>
+
+<div>
+{% for key, value in data.items() %}
+{% if key.startswith('h'): %}
+        <h1> {{ value }} </h1>
+{%endif%}
+{% if key.startswith('p'): %}
+        <p> {{ value }} </p>
+{%endif%}
+{% if key.startswith('f'): %}
+        <img src={{ value }}  alt="image">
+{%endif%}
+{% if key.startswith('t'): %}
+<table>
+<th>
+{% for i in range(0,value.shape[1]): %}
+<td>{{value.columns[i]}}</td>
+{% endfor %}
+</th>
+{% for j in range(0,value.shape[0]): %}
+<tr>
+{% for k in range(0,value.shape[0]): %}
+<td>{{value.iloc[j][k]}}</td>
+{% endfor %}
+</tr>
+{% endfor %}
+</table>
+{%endif%}
+{% endfor %}
+</tiv>
+</body>
+</html>

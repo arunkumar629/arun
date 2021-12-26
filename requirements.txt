@@ -1,0 +1,14 @@
+torch
+torchtext
+
+flask
+img2pdf
+ocrmypdf
+pillow
+flask-ngrok
+tabula-py
+layoutparser
+opencv-python
+pytesseract
+layoutparser[ocr]
+tesseract
