@@ -12,7 +12,7 @@ import img2pdf
 import ocrmypdf
 from PIL import Image
 app = Flask(__name__)
-run_with_ngrok(app)  # Start ngrok when app is run
+#run_with_ngrok(app)  # Start ngrok when app is run
 @app.route('/')
 def upload_file():
     return render_template('upload.html')
@@ -69,4 +69,4 @@ def uploadfile():
 
 if __name__ == '__main__':
 #   app.run()
-    app.run(host = '0.0.0.0', port = 80,debug=True)
+    app.run()
