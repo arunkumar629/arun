@@ -64,7 +64,7 @@ def uploadfile():
                 id+=1
                 df=tabula.read_pdf("output.pdf",pages="all")
                 data['t'+str(id)]=df[0]
-    time.sleep(10)
+    time.sleep(2)
     return render_template('result.html',data=data)
 
 if __name__ == '__main__':
